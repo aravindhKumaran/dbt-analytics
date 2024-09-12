@@ -2,7 +2,7 @@ WITH payments AS (
     SELECT  
         *
     FROM 
-        raw.stripe.payment 
+        {{ source('stripe', 'payment') }}
 )
 
 SELECT 
